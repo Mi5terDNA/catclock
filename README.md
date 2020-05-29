@@ -2,6 +2,12 @@
   <img src="catclock.gif">
 </p>
 
+I forked this and edited the makefile so it will compile on OS X.  
+Happily tail-wagging on macOS Catalina 10.15.5 as of now.
+
+You need XQuartz https://www.xquartz.org/ and openmotif installed ```brew install openmotif```
+
+
 catclock
 ========
 
