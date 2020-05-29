@@ -13,14 +13,14 @@ XLIB      = -lX11
 MOTIFLIBS = -lXm -lXt
 EXTENSIONLIB = -lXext
 SYSLIBS   = -lm
-LIBS      = -L/opt/local/lib $(MOTIFLIBS) $(EXTENSIONLIB) $(XLIB) $(SYSLIBS)
+LIBS      = -L/opt/x11/include/x11 -L/opt/x11/lib $(MOTIFLIBS) $(EXTENSIONLIB) $(XLIB) $(SYSLIBS)
 ifeq ($(WITH_TEMPO_TRACKER), 1)
 	LIBS += -lpulse -lpulse-simple -lpthread -laubio
 endif
 #LIBS      = $(MOTIFLIBS) $(EXTENSIONLIB) $(XLIB) $(SYSLIBS)
 
 LOCALINCS = -I.
-MOTIFINCS = -I/opt/local/include -I/opt/local/include/X11
+MOTIFINCS = -I/opt/x11/include -I/opt/include/X11 -I/opt/x11/
 #MOTIFINCS = -I/usr/include
 INCS      = $(LOCALINCS) $(MOTIFINCS)
 
